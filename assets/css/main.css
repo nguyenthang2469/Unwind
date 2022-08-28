@@ -1,0 +1,450 @@
+.app {
+    position: relative;
+}
+
+.header {
+    max-width: 1320px;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 0 12px;
+    z-index: 1;
+}
+
+.header-home-link,
+.footer-item-link {
+    display: inline-block;
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+.header-home-link {
+    padding: 12px 24px;
+}
+
+.header-home-link__subheading,
+.footer-item-link__subheading {
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.header-list {
+    list-style-type: none;
+    display: flex;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.header-item__link {
+    display: inline-block;
+    opacity: 0.7;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    line-height: 2.3rem;
+}
+
+.header-item__link:hover {
+    font-size: 1.5rem;
+    opacity: 1;
+}
+
+.header-item--active .header-item__link {
+    opacity: 1;
+}
+
+
+/* Header menu on tablet and mobile */
+
+.header-menu {
+    position: absolute;
+    top: 24px;
+    right: 6px;
+    display: none;
+    opacity: 0.9;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: .2s linear;
+}
+
+.header-menu-list {
+    position: relative;
+}
+
+.header-menu-icon {
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin-bottom: 2px;
+    border-radius: 2px;
+    background-color: var(--white-color);
+    transition: transform .2s linear;
+}
+
+.header-menu-icon:nth-child(2) {
+    position: absolute;
+}
+
+.header-menu__text {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: var(--white-color);
+    letter-spacing: 2px;
+    margin-left: 10px;
+    transition: .2s linear;
+}
+
+.header-menu.open-menu+.header-list {
+    display: flex;
+}
+
+.header-menu.open-menu {
+    right: -59px;
+}
+
+.header-menu.open-menu .header-menu-icon:first-child,
+.header-menu.open-menu .header-menu-icon:last-child {
+    display: none;
+}
+
+.header-menu.open-menu .header-menu-icon:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.header-menu.open-menu .header-menu-icon:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.header-menu.open-menu .header-menu__text {
+    opacity: 0;
+}
+
+
+/* Slider */
+
+.slide-section {
+    height: 700px;
+    position: relative;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: url('../image/xbg_3.jpg.pagespeed.ic.-P-sDxMfPG.webp') center center / cover no-repeat;
+}
+
+.modal {
+    display: flex;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.slide__content {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    z-index: 0;
+}
+
+.slide-breadcrumb-home__link {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    margin-right: 4px;
+    padding: 2px 4px;
+    display: inline-block;
+}
+
+.slide-heading {
+    color: var(--white-color);
+    margin-top: 12px;
+    font-size: 7rem;
+    font-weight: 400;
+    line-height: 8.4rem;
+    font-family: "Old Standard TT", Arial, sans-serif;
+}
+
+.content-section {
+    background-color: #f8f8f8;
+}
+
+.content-culinary {
+    padding: 128px 12px;
+}
+
+.content-culinary-scenery {
+    margin-right: 36px;
+}
+
+.content-culinary-image {
+    position: relative;
+    width: 97%;
+    height: 100%;
+    background: url('../image/xresto-bar.jpg.pagespeed.ic.CvcoWGJzLg.webp') center center / cover no-repeat;
+}
+
+.content-culinary-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.content-culinary-image__icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    padding: 26px 28px;
+    color: var(--white-color);
+    background-color: var(--text-color-primary);
+    border-radius: 5px;
+    font-size: 5rem;
+    transform: translate(44%, -50%);
+}
+
+.content-culinary-food {
+    flex: 1;
+}
+
+.content-culinary-food-wrapper {
+    margin-bottom: -10px;
+}
+
+.culinary-food-item {
+    display: flex;
+    align-items: center;
+    padding: 30px;
+    font-size: 2rem;
+    background-color: var(--white-color);
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.culinary-food-item:hover {
+    background-color: #222;
+    color: var(--white-color);
+}
+
+.culinary-food-item__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.culinary-food-item__name {
+    font-weight: 600;
+    flex: 1;
+    padding-left: 16px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.culinary-food-item__price {
+    font-weight: 400;
+    color: var(--text-color-primary);
+}
+
+.content-gallery {
+    overflow: auto;
+}
+
+.content-gallery-list {
+    margin: 16px 4px 0;
+    padding-bottom: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slider 10s infinite;
+}
+
+@keyframes slider {
+    20% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(-100%);
+    }
+    75% {
+        transform: translateX(-200%);
+    }
+    90% {
+        transform: translateX(-200%);
+    }
+}
+
+.content-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.content-gallery-item {
+    padding: 0 8px;
+}
+
+.content-gallery-item__link {
+    height: 250px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 2px;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.content-gallery-item__link:hover .content-gallery-item__link-wrapper {
+    display: flex;
+}
+
+.content-gallery-item__link-wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+}
+
+.content-gallery-item__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: var(--white-color);
+    font-size: 1.8rem;
+    border-radius: 50%;
+    background-color: var(--text-color-primary);
+    z-index: 1;
+}
+
+.footer-wrapper {
+    padding: 112px 12px 120px;
+    background: #1a1a1a;
+    color: rgba(255, 255, 255, .7);
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.footer-item {
+    margin-bottom: 20px;
+}
+
+.footer-item-link {
+    margin-bottom: 45px;
+}
+
+.footer-item__desc {
+    font-size: 1.6rem;
+    line-height: 2.9rem;
+    font-weight: 400;
+}
+
+.footer-social-list {
+    list-style-type: none;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 16px;
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: var(--text-color-primary);
+    font-size: 1.4rem;
+    text-decoration: none;
+    background-color: #262626;
+    margin-right: 10px;
+}
+
+.footer-item__heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--white-color);
+    margin-bottom: 40px;
+}
+
+.footer-nav-list,
+.footer-feedback-list {
+    list-style-type: none;
+}
+
+.footer-nav-item {
+    padding: 4px 0 12px;
+}
+
+.footer-nav-item-link {
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+}
+
+.footer-nav-item-link__icon {
+    margin-right: 8px;
+    font-size: 1.4rem;
+}
+
+.footer-feedback-item {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-feedback-item__icon {
+    margin-right: 24px;
+    font-size: 1.4rem;
+    color: var(--text-color-primary);
+}
+
+.footer-copyright {
+    padding: 48px 0;
+    background-color: #151515;
+    color: rgba(255, 255, 255, .5);
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.footer-copyright__link {
+    color: var(--text-color-primary);
+    text-decoration: none;
+    line-height: 2.3rem;
+    font-weight: 400;
+}
